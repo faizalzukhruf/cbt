@@ -1,0 +1,593 @@
+<html class="gr__mtsnmodelmks_16mb_com" lang="en"><head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Aplikasi Ujian</title>
+
+        <!-- Bootstrap -->
+        <link href="http://ujian.nguprek.com/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="http://ujian.nguprek.com/asset/unbk/style.css" rel="stylesheet">    
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <script src="http://ujian.nguprek.com/asset/unbk/jquery.js"></script>	
+        <script src="http://ujian.nguprek.com/bootstrap/js/bootstrap.min.js"></script>	
+        <script src="http://ujian.nguprek.com/asset/unbk/script.js"></script>
+    <!--<script src="http://ujian.nguprek.com/js/basic.js"></script>-->
+
+        <style type="text/css">
+            .options p{	
+                margin-top: -27px;
+            }
+        </style>
+        <script>
+            var base_url = "http://ujian.nguprek.com/";
+            var Timer;
+            var TotalSeconds;
+
+
+            function CreateTimer(TimerID, Time) {
+                Timer = document.getElementById(TimerID);
+                TotalSeconds = Time;
+
+                UpdateTimer()
+                window.setTimeout("Tick()", 1000);
+            }
+
+            function Tick() {
+                if (TotalSeconds <= 0) {
+                    alert("Time's up!")
+                    return;
+                }
+
+                TotalSeconds -= 1;
+                UpdateTimer()
+                window.setTimeout("Tick()", 1000);
+            }
+
+            function UpdateTimer() {
+                var Seconds = TotalSeconds;
+
+                var Days = Math.floor(Seconds / 86400);
+                Seconds -= Days * 86400;
+
+                var Hours = Math.floor(Seconds / 3600);
+                Seconds -= Hours * (3600);
+
+                var Minutes = Math.floor(Seconds / 60);
+                Seconds -= Minutes * (60);
+
+
+                var TimeStr = ((Days > 0) ? Days + " days " : "") + LeadingZero(Hours) + ":" + LeadingZero(Minutes) + ":" + LeadingZero(Seconds)
+
+
+                Timer.innerHTML = TimeStr;
+            }
+
+
+            function LeadingZero(Time) {
+
+                return (Time < 10) ? "0" + Time : +Time;
+
+            }
+
+            //var myCountdown1 = new Countdown({time:900, rangeHi:"hour", rangeLo:"second"});
+            setTimeout(submitform, '900000');
+
+            function submitform() {
+                alert('Time Over');
+                window.location = "http://ujian.nguprek.com/index.php/quiz/submit_quiz";
+            }
+
+            function tutup() {
+                $('#yakin-modal').hide();
+            }
+            
+            function tutupRagu(){
+                $('#ragu-modal').hide();
+            }
+
+            function selesai() {
+                if ($('#yakin').is(":checked")) {
+                    window.location = "../submit_quiz/";
+                } else {
+                    alert('Silahkan Pilih Centang Terlebih Dahulu');
+                }
+            }
+        </script>
+        <style type="text/css">
+            label.coolbox {  
+                border: solid 1px #000;  
+                margin:2px;
+                display:inline-block;
+                width:30px;
+                height:30px;
+                line-height:30px;
+                text-align:center;
+                vertical-align:middle;
+                font-weight:bold;
+                font-size:20px;
+                border-radius: 20px;    
+            }
+            label.coolbox input {display:none;}
+            label.coolbox span {color:#000;}
+            label.coolbox input:checked + span {color:red;}
+        </style>
+    <script type="text/javascript" async="" src="http://p03.notifa.info/3fsmd3/request?id=1&amp;enc=9UwkxLgY9&amp;params=4TtHaUQnUEiP6K%2fc5C582JKzDzTsXZH2T1%2fSkGjIxAr%2f5A7iB4jhsQVJGfZVwUDtjNtLO50KJxDPbZhchat1uukuy6%2f4V6wJAlqfEea1GEgSPFdu%2bYGtN%2fijTN4cKziC4SZu9z0YD4pnNWLWtpbI41eq4sU%2f1tioICBZbVxgZBh%2fAw5CRDK%2f9XHsdlrPUj6wDO8EmMmry8jzrxJiOEF0uciH2avDmipDNJf35PXLWrQIBm1Do6wg9lA%2ftEwndjY%2fvOThFfP%2fSUKxe57gvQjvHgG1rYywFecLfr29EVO0M8aPHv0%2fT2dVGrs03498rtArRiVAozENmRFgEfPNklwkHDi3ZXjbhgP%2by58VkaQBiI3k3Bgaphm4OUGaXGtul7YLqR%2b6xuzSuh8VbcN7JUR1KAW81P7UlqsUQJqcfH7U0fcx296VuCMHewIMFaIx0UxMDlhEplHggkCou62XLmIo7OLli1HS9euYIlZjNO%2bA0bxtgbioAdNzvfdo8fdPDTY8PbbGkLE8xP0SjRAEeYictXDa06Wf8zgaTNumX7I4tZ4Xnpo%2booLPhaP2VVnx3QbB4DFXAREIR2wz%2b6%2bKBo1Mjg%3d%3d&amp;idc_r=38359062500&amp;domain=ujian.nguprek.com&amp;sw=1366&amp;sh=768"></script></head>
+    <body>
+        <style>
+            .MathJax_Display {display : inline !important;}
+        </style>
+        <div id="header">
+            <div class="container">
+                <div class="row">	
+                    <div class="col-md-12">
+                        <div id="logo">
+                           <!-- <img src="http://ujian.nguprek.com/asset/unbk/logo.png"> -->
+                        </div>
+                        <div id="welcome">
+                            <div id="avatar">
+                                <img src="http://ujian.nguprek.com/asset/unbk/avatar.png">
+                            </div>
+                            <div id="selamat">
+                                <p>Selamat Datang</p>
+                                <p><b id="nama_siswa">Peserta Test</b></p>
+                                <p><a href="http://ujian.nguprek.com/index.php/user/logout">Logout</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div style="height:30px;"></div>
+            </div>
+        </div>
+        <div class="modal" id="ragu-modal">
+            <div class="modal-dialog" role="document" style="margin: 120px auto">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="tutupRagu()"><span aria-hidden="true">×</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Konfirmasi Test</h4>
+                    </div>
+                    <div class="modal-body">
+                        <span style="font-size:50px; position: absolute; top: 10px;" class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span> 
+                        <p style="padding-left : 70px">Anda masih ragu - ragu / belum mengisi terhadap beberapa jawaban. Silakan tinjau lagi jawaban anda.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger close-modal" data-dismiss="modal" style="width: 100%" onclick="tutupRagu()">Ya</button>
+                    </div>
+                </div>
+            </div>
+        </div>	
+
+        <div class="modal" id="yakin-modal">
+            <div class="modal-dialog" role="document" style="margin: 120px auto; width:450px;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="tutupRagu()"><span aria-hidden="true">×</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Konfirmasi Test</h4>
+                    </div>
+                    <div class="modal-body">
+                        <span style="font-size:50px; position: absolute; top: 10px;" class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span> 
+                        <p style="padding-left : 70px">Anda masih memiliki waktu untuk mata uji ini <br><br> Apakah anda yakin ingin mengakhiri mata uji ini ?</p>
+
+                        <table style="width:100%">
+                            <tbody><tr>
+                                    <td style="text-align:right"><input id="yakin" type="checkbox"></td>
+                                    <td style="text-align:center; width: 350px;"><span class="red">CENTANG</span>, kemudian tekan tombol selesai. <br>Anda tidak akan bisa kembali ke soal<br>jika sudah menekan tombol selesai</td>
+                                </tr>
+                            </tbody></table>
+                    </div>
+                    <div class="modal-footer" style="text-align:center">
+                        <button type="button" id="selesai" class="btn btn-default" data-dismiss="modal" style="width:45%" onclick="selesai()">SELESAI</button>
+                        <button type="button" class="btn btn-danger close-modal" style="width:45%" onclick="tutup()">TIDAK</button>
+                    </div>
+                </div>
+            </div>
+        </div>	
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="soal">
+                        <div id="soal-head">
+                            <div id="nomor">
+                                SOAL NO <span>1</span>
+                            </div>
+                            <div id="waktu">
+                                <span>Sisa Waktu</span>
+                                <span class="sisa" id="timer">00:14:04</span>	
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div id="font-size">
+                            Ukuran font soal : <span class="a1">A</span><span class="a2">A</span><span class="a3">A</span>
+                        </div>
+                        <div id="soal-body">
+                            <form method="post" action="http://ujian.nguprek.com/index.php/quiz/submit_quiz/773" id="quiz_form">
+                                <input type="hidden" name="rid" value="773" id="rid">
+                                <input type="hidden" name="noq" value="10" id="noq">
+                                <input type="hidden" name="individual_time" id="individual_time" value="30,0,0,0,0,0,0,0,0,0">
+                                
+                                                                    <div id="nomor-asli-1" class="soal nomor-asli-1 nomor-1 active">
+                                        <div class="nomor">1</div>	
+                                        <p>A adalah seorang administrator jaringan, ia ditugaskan untuk menganankan router di sebuah perusahaan. Akhir-akhir ini jaringan yang ia kelola mengalami kendala, sebabnya adalah router yang terlalu banyak menerima paket data yang masuk. Ada beberapa komputer yang melakukan flooding paket data ke server. A berniat menggunakan firewall untuk mengatasinya.</p>
+
+<p>Chain apa yang harus digunakan oleh A ?</p>
+                                        <div class="options-group">
+                                                                                            <input type="hidden" name="question_type[]" id="q_type0" value="1">
+                                                 <input type="hidden" name="qid[0]" value="5263" id="qid">
+                                               
+                                                                                                        <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[0][]" id="answer_value0-0" class="option" value="15797"><span id="option-15797">A</span></label>&nbsp;<p>INPUT</p>
+                                                                                                                    </div>
+                                                                                                                <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[0][]" id="answer_value0-1" class="option" value="15801"><span id="option-15801">B</span></label>&nbsp;<p>MASQUERADE</p>
+                                                                                                                    </div>
+                                                                                                                <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[0][]" id="answer_value0-2" class="option" value="15800"><span id="option-15800">C</span></label>&nbsp;<p>DROP</p>
+                                                                                                                    </div>
+                                                                                                                <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[0][]" id="answer_value0-3" class="option" value="15799"><span id="option-15799">D</span></label>&nbsp;<p>FORWARD</p>
+                                                                                                                    </div>
+                                                                                                                <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[0][]" id="answer_value0-4" class="option" value="15798"><span id="option-15798">E</span></label>&nbsp;<p>OUTPUT</p>
+                                                                                                                    </div>
+                                                        				
+                                        </div>
+                                    </div>
+                                        <div id="nomor-asli-2" class="soal nomor-asli-2 nomor-2 ">
+                                        <div class="nomor">2</div>	
+                                        <p>Di bawah ini pernyataan yang benar untuk proses koneksi menggunakan VPN adalah . . .&nbsp;</p>
+                                        <div class="options-group">
+                                                                                            <input type="hidden" name="question_type[]" id="q_type1" value="1">
+                                                 <input type="hidden" name="qid[1]" value="5257" id="qid">
+                                               
+                                                                                                        <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[1][]" id="answer_value1-0" class="option" value="15777"><span id="option-15777">A</span></label>&nbsp;<p>VPN merupakan koneksi amam sehingga IP tidak bisa terlihat kecuali oleh server</p>
+                                                                                                                    </div>
+                                                                                                                <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[1][]" id="answer_value1-1" class="option" value="15773"><span id="option-15773">B</span></label>&nbsp;<p>IP pengguna yang akan terlihat adalah ip server vpn</p>
+                                                                                                                    </div>
+                                                                                                                <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[1][]" id="answer_value1-2" class="option" value="15776"><span id="option-15776">C</span></label>&nbsp;<p>Tidak ada IP dalam konekso VPN, semuanya menggunakan MAC Address</p>
+                                                                                                                    </div>
+                                                                                                                <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[1][]" id="answer_value1-3" class="option" value="15774"><span id="option-15774">D</span></label>&nbsp;<p>IP pengguna VPN akan menjadi anonymous</p>
+                                                                                                                    </div>
+                                                                                                                <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[1][]" id="answer_value1-4" class="option" value="15775"><span id="option-15775">E</span></label>&nbsp;<p>VPN merupakan koneksi aman, jadi ip tidak terlihat</p>
+                                                                                                                    </div>
+                                                        				
+                                        </div>
+                                    </div>
+                                        <div id="nomor-asli-3" class="soal nomor-asli-3 nomor-3 ">
+                                        <div class="nomor">3</div>	
+                                        <p>[Kasus]</p>
+
+<p>Seorang Administrator jaringan membatasi akses ke server mereka dengan memisahkan jaringan internal dan eksternal. Hanya jaringan internal yang bisa mengakses protokol SSH dan remote server lainnya.&nbsp;</p>
+
+<p>Konsep atau aspek keamanan jaringan apa yang coba diterapkan oleh sang Administrator?</p>
+                                        <div class="options-group">
+                                                                                            <input type="hidden" name="question_type[]" id="q_type2" value="1">
+                                                 <input type="hidden" name="qid[2]" value="5252" id="qid">
+                                               
+                                                                                                        <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[2][]" id="answer_value2-0" class="option" value="15751"><span id="option-15751">A</span></label>&nbsp;<p>Non-repudiation</p>
+                                                                                                                    </div>
+                                                                                                                <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[2][]" id="answer_value2-1" class="option" value="15749"><span id="option-15749">B</span></label>&nbsp;<p>Integrity</p>
+                                                                                                                    </div>
+                                                                                                                <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[2][]" id="answer_value2-2" class="option" value="15750"><span id="option-15750">C</span></label>&nbsp;<p>Availability</p>
+                                                                                                                    </div>
+                                                                                                                <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[2][]" id="answer_value2-3" class="option" value="15752"><span id="option-15752">D</span></label>&nbsp;<p>Authentication</p>
+                                                                                                                    </div>
+                                                                                                                <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[2][]" id="answer_value2-4" class="option" value="15748"><span id="option-15748">E</span></label>&nbsp;<p>Confidentiality</p>
+                                                                                                                    </div>
+                                                        				
+                                        </div>
+                                    </div>
+                                        <div id="nomor-asli-4" class="soal nomor-asli-4 nomor-4 ">
+                                        <div class="nomor">4</div>	
+                                        <p>Router OSPF digunakan untuk routing dengan jaringan jumlah kecil. Khususnya untuk menghubungkan beberapa Autonomous System</p>
+                                        <div class="options-group">
+                                                                                            <input type="hidden" name="question_type[]" id="q_type3" value="1">
+                                                 <input type="hidden" name="qid[3]" value="5261" id="qid">
+                                               
+                                                                                                        <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[3][]" id="answer_value3-0" class="option" value="15793"><span id="option-15793">A</span></label>&nbsp;<p>Salah</p>
+                                                                                                                    </div>
+                                                                                                                <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[3][]" id="answer_value3-1" class="option" value="15794"><span id="option-15794">B</span></label>&nbsp;<p>Benar</p>
+                                                                                                                    </div>
+                                                        				
+                                        </div>
+                                    </div>
+                                        <div id="nomor-asli-5" class="soal nomor-asli-5 nomor-5 ">
+                                        <div class="nomor">5</div>	
+                                        <p>&nbsp;</p>
+
+<p>Sebuah sistem dibangun dengan menggunakan enkripsi untuk setiap data yang dikirim dan diterima. Enkripsi digunakan untuk mengantisipasi perubahan data yang terjadi karena pihak ketiga yang tidak bertanggung jawab.&nbsp;</p>
+
+<p>Di atas adalah salah satu contoh untuk konsep atau aspek keamanan . . .&nbsp; .</p>
+                                        <div class="options-group">
+                                                                                            <input type="hidden" name="question_type[]" id="q_type4" value="1">
+                                                 <input type="hidden" name="qid[4]" value="5253" id="qid">
+                                               
+                                                                                                        <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[4][]" id="answer_value4-0" class="option" value="15757"><span id="option-15757">A</span></label>&nbsp;<p>Authentication</p>
+                                                                                                                    </div>
+                                                                                                                <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[4][]" id="answer_value4-1" class="option" value="15753"><span id="option-15753">B</span></label>&nbsp;<p>Integrity</p>
+                                                                                                                    </div>
+                                                                                                                <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[4][]" id="answer_value4-2" class="option" value="15756"><span id="option-15756">C</span></label>&nbsp;<p>Non-repudiation</p>
+                                                                                                                    </div>
+                                                                                                                <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[4][]" id="answer_value4-3" class="option" value="15754"><span id="option-15754">D</span></label>&nbsp;<p>Confidentiality</p>
+                                                                                                                    </div>
+                                                                                                                <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[4][]" id="answer_value4-4" class="option" value="15755"><span id="option-15755">E</span></label>&nbsp;<p>Availability</p>
+                                                                                                                    </div>
+                                                        				
+                                        </div>
+                                    </div>
+                                        <div id="nomor-asli-6" class="soal nomor-asli-6 nomor-6 ">
+                                        <div class="nomor">6</div>	
+                                        <p>BGP merupakan routing dinamis yang routing tablenya ditentukan oleh administrator</p>
+                                        <div class="options-group">
+                                                                                            <input type="hidden" name="question_type[]" id="q_type5" value="1">
+                                                 <input type="hidden" name="qid[5]" value="5262" id="qid">
+                                               
+                                                                                                        <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[5][]" id="answer_value5-0" class="option" value="15795"><span id="option-15795">A</span></label>&nbsp;<p>Salah</p>
+                                                                                                                    </div>
+                                                                                                                <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[5][]" id="answer_value5-1" class="option" value="15796"><span id="option-15796">B</span></label>&nbsp;<p>Benar</p>
+                                                                                                                    </div>
+                                                        				
+                                        </div>
+                                    </div>
+                                        <div id="nomor-asli-7" class="soal nomor-asli-7 nomor-7 ">
+                                        <div class="nomor">7</div>	
+                                        <p>Sebuah server yang digunakan untuk database dilengkapi dengan firewall dan sistem IDS. Semua database sudah dilindungi dengan password dengan kekuatan tinggi, ada aturan yang membatasi akses remote dari luar dan memengganti password root nenjadi lebih rumit.</p>
+
+<p>&nbsp;</p>
+
+<p>Upaya-upaya di atas merupakan bagian dari</p>
+                                        <div class="options-group">
+                                                                                            <input type="hidden" name="question_type[]" id="q_type6" value="1">
+                                                 <input type="hidden" name="qid[6]" value="5258" id="qid">
+                                               
+                                                                                                        <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[6][]" id="answer_value6-0" class="option" value="15778"><span id="option-15778">A</span></label>&nbsp;<p>Host Harddening</p>
+                                                                                                                    </div>
+                                                                                                                <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[6][]" id="answer_value6-1" class="option" value="15782"><span id="option-15782">B</span></label>&nbsp;<p>Authorization</p>
+                                                                                                                    </div>
+                                                                                                                <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[6][]" id="answer_value6-2" class="option" value="15781"><span id="option-15781">C</span></label>&nbsp;<p>Availability</p>
+                                                                                                                    </div>
+                                                                                                                <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[6][]" id="answer_value6-3" class="option" value="15779"><span id="option-15779">D</span></label>&nbsp;<p>Non-repudiation</p>
+                                                                                                                    </div>
+                                                                                                                <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[6][]" id="answer_value6-4" class="option" value="15780"><span id="option-15780">E</span></label>&nbsp;<p>Integrity</p>
+                                                                                                                    </div>
+                                                        				
+                                        </div>
+                                    </div>
+                                        <div id="nomor-asli-8" class="soal nomor-asli-8 nomor-8 ">
+                                        <div class="nomor">8</div>	
+                                        <p>Sebuah perusahaan penyedia layanan media sosial memiliki lebih dari satu server. Mereka menempatkan sistem di beberapa server di beberapa tempat berbeda untuk antisipasi beberapa kemungkinan, seperti bencana, kerusuhan dan serangan jaringan keamanan yang bisa melumpuhkan server.&nbsp;</p>
+
+<p>Apa yang dilakukan perusahaan merupakan bagian dari konsep atau aspek keamanan ?</p>
+                                        <div class="options-group">
+                                                                                            <input type="hidden" name="question_type[]" id="q_type7" value="1">
+                                                 <input type="hidden" name="qid[7]" value="5256" id="qid">
+                                               
+                                                                                                        <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[7][]" id="answer_value7-0" class="option" value="15769"><span id="option-15769">A</span></label>&nbsp;<p>Confidentiality</p>
+                                                                                                                    </div>
+                                                                                                                <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[7][]" id="answer_value7-1" class="option" value="15768"><span id="option-15768">B</span></label>&nbsp;<p>Availability</p>
+                                                                                                                    </div>
+                                                                                                                <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[7][]" id="answer_value7-2" class="option" value="15772"><span id="option-15772">C</span></label>&nbsp;<p>Authentication</p>
+                                                                                                                    </div>
+                                                                                                                <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[7][]" id="answer_value7-3" class="option" value="15770"><span id="option-15770">D</span></label>&nbsp;<p>Integrity</p>
+                                                                                                                    </div>
+                                                                                                                <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[7][]" id="answer_value7-4" class="option" value="15771"><span id="option-15771">E</span></label>&nbsp;<p>Non-repudiation</p>
+                                                                                                                    </div>
+                                                        				
+                                        </div>
+                                    </div>
+                                        <div id="nomor-asli-9" class="soal nomor-asli-9 nomor-9 ">
+                                        <div class="nomor">9</div>	
+                                        <p>Mode station dalam pengaturan mode wireless mikrotik berfungsi untuk ?</p>
+                                        <div class="options-group">
+                                                                                            <input type="hidden" name="question_type[]" id="q_type8" value="1">
+                                                 <input type="hidden" name="qid[8]" value="5224" id="qid">
+                                               
+                                                                                                        <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[8][]" id="answer_value8-0" class="option" value="15627"><span id="option-15627">A</span></label>&nbsp;<p>Membuat wireless mikrotik bekerja sebagai access personal</p>
+                                                                                                                    </div>
+                                                                                                                <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[8][]" id="answer_value8-1" class="option" value="15625"><span id="option-15625">B</span></label>&nbsp;<p>Membuat wireless mikrotik bekerja sebagai client</p>
+                                                                                                                    </div>
+                                                                                                                <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[8][]" id="answer_value8-2" class="option" value="15628"><span id="option-15628">C</span></label>&nbsp;<p>Membuat wireless mikrotik bekerja sebagai terminal</p>
+                                                                                                                    </div>
+                                                                                                                <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[8][]" id="answer_value8-3" class="option" value="15626"><span id="option-15626">D</span></label>&nbsp;<p>Membuat wireless mikrotik bekerja sebagai access point</p>
+                                                                                                                    </div>
+                                                        				
+                                        </div>
+                                    </div>
+                                        <div id="nomor-asli-10" class="soal nomor-asli-10 nomor-10 ">
+                                        <div class="nomor">10</div>	
+                                        <p>Pernyataan yang benar untuk menggambarkan Access Point adalah . . .&nbsp;</p>
+                                        <div class="options-group">
+                                                                                            <input type="hidden" name="question_type[]" id="q_type9" value="1">
+                                                 <input type="hidden" name="qid[9]" value="5217" id="qid">
+                                               
+                                                                                                        <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[9][]" id="answer_value9-0" class="option" value="15598"><span id="option-15598">A</span></label>&nbsp;<p>Perangkat yang bisa menghubungkan perangkat lain dengan media wired</p>
+                                                                                                                    </div>
+                                                                                                                <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[9][]" id="answer_value9-1" class="option" value="15599"><span id="option-15599">B</span></label>&nbsp;<p>Perangkat yang memiliki fitur NAT&nbsp;</p>
+                                                                                                                    </div>
+                                                                                                                <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[9][]" id="answer_value9-2" class="option" value="15600"><span id="option-15600">C</span></label>&nbsp;<p>Perangkat yang melakukan routing untuk hostpot</p>
+                                                                                                                    </div>
+                                                                                                                <div class="options"><label class="coolbox">
+                                                                <input type="radio" name="answer[9][]" id="answer_value9-3" class="option" value="15597"><span id="option-15597">D</span></label>&nbsp;<p>Perangkat yang menjembatani koneksi nirkabel dengan koneksi kabel</p>
+                                                                                                                    </div>
+                                                        				
+                                        </div>
+                                    </div>
+                                </form>
+                        </div>
+                        <div id="soal-foot">
+                            <table width="100%">
+                                <tbody><tr>
+                                        <td align="left"><button type="button" id="prev-soal" class="btn btn-default"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> SOAL SEBELUMNYA</button></td>
+                                        <td align="center"><button type="button" class="btn btn-warning ragu"><span class="glyphicon glyphicon-unchecked ragu-1 ragu-check" aria-hidden="true"></span> RAGU - RAGU</button></td>
+                                        <td align="right"><button type="button" id="next-soal" class="btn btn-primary">SOAL BERIKUTNYA <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button></td>
+                                        <td align="right"><button style="display:none" type="button" data-toggle="modal" data-target="#myModal" id="last-soal" class="btn btn-primary">KUMPULKAN JAWABAN<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button></td>
+                                    </tr>
+                                </tbody></table>
+                                <!-- <table width="100%">
+                                        <tbody><tr>
+                                                <td align="left"><button type="button" id="prev-soal" class="btn btn-default"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> SOAL SEBELUMNYA</button></td>
+                                                <td align="center"><button type="button" class="btn btn-warning ragu"><span class="glyphicon glyphicon-unchecked ragu-1 ragu-check" aria-hidden="true"></span> RAGU - RAGU</button></td>
+                                                <td align="right"><button type="button" id="next-soal" class="btn btn-primary" onClick="javascript:show_next_question();">SOAL BERIKUTNYA <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button></td>
+                                                <td align="right"><button style="display:none" type="button" data-toggle="modal" data-target="#myModal" id="last-soal" class="btn btn-primary">KUMPULKAN JAWABAN<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button></td>
+                                                <button class="btn btn-danger"  onClick="javascript:cancelmove();" style="margin-top:2px;" >Kirim Jawaban</button>
+                                        </tr>
+                                </tbody></table> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="right: 299px;" id="summary-button" class="show">
+            <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button>
+        </div>
+
+        <div style="display: block;" id="summary">
+                <div class="no nomor-asli-1 no-1 active" id="qbtn1">
+                    <p>1</p>
+                    <span></span>
+                </div>
+                <!-- <div class="qbtn" onClick="javascript:show_question('0');" id="qbtn0" ></div> -->
+                    <div class="no nomor-asli-2 no-2 " id="qbtn2">
+                    <p>2</p>
+                    <span></span>
+                </div>
+                <!-- <div class="qbtn" onClick="javascript:show_question('1');" id="qbtn1" ></div> -->
+                    <div class="no nomor-asli-3 no-3 " id="qbtn3">
+                    <p>3</p>
+                    <span></span>
+                </div>
+                <!-- <div class="qbtn" onClick="javascript:show_question('2');" id="qbtn2" ></div> -->
+                    <div class="no nomor-asli-4 no-4 " id="qbtn4">
+                    <p>4</p>
+                    <span></span>
+                </div>
+                <!-- <div class="qbtn" onClick="javascript:show_question('3');" id="qbtn3" ></div> -->
+                    <div class="no nomor-asli-5 no-5 " id="qbtn5">
+                    <p>5</p>
+                    <span></span>
+                </div>
+                <!-- <div class="qbtn" onClick="javascript:show_question('4');" id="qbtn4" ></div> -->
+                    <div class="no nomor-asli-6 no-6 " id="qbtn6">
+                    <p>6</p>
+                    <span></span>
+                </div>
+                <!-- <div class="qbtn" onClick="javascript:show_question('5');" id="qbtn5" ></div> -->
+                    <div class="no nomor-asli-7 no-7 " id="qbtn7">
+                    <p>7</p>
+                    <span></span>
+                </div>
+                <!-- <div class="qbtn" onClick="javascript:show_question('6');" id="qbtn6" ></div> -->
+                    <div class="no nomor-asli-8 no-8 " id="qbtn8">
+                    <p>8</p>
+                    <span></span>
+                </div>
+                <!-- <div class="qbtn" onClick="javascript:show_question('7');" id="qbtn7" ></div> -->
+                    <div class="no nomor-asli-9 no-9 " id="qbtn9">
+                    <p>9</p>
+                    <span></span>
+                </div>
+                <!-- <div class="qbtn" onClick="javascript:show_question('8');" id="qbtn8" ></div> -->
+                    <div class="no nomor-asli-10 no-10 " id="qbtn10">
+                    <p>10</p>
+                    <span></span>
+                </div>
+                <!-- <div class="qbtn" onClick="javascript:show_question('9');" id="qbtn9" ></div> -->
+            </div>
+        <div id="jumlah_soal" style="display:none">10</div>	
+        <script>
+            $(document).ready(function () {
+                $('#finish').text('11 January 2016 17:00:00');
+                $('#last-soal').click(function () {
+                    if ($('.not-done').length > 0) {
+                        $('#ragu-modal').show();
+                    } else {
+                        if ($('.ragu-ragu').length > 0) {
+                            $('#ragu-modal').show();
+                        } else {
+                            $('#yakin-modal').show();
+                        }
+                    }
+                })
+            });
+        </script>
+        <script>
+            var ctime = 0;
+            var ind_time = new Array();
+                ind_time[0] =0;
+                    ind_time[1] =0;
+                    ind_time[2] =0;
+                    ind_time[3] =0;
+                    ind_time[4] =0;
+                    ind_time[5] =0;
+                    ind_time[6] =0;
+                    ind_time[7] =0;
+                    ind_time[8] =0;
+                    ind_time[9] =0;
+                noq = "10";
+            //show_question('0');
+
+
+            function increasectime() {
+
+                ctime += 1;
+
+            }
+            setInterval(increasectime, 1000);
+            setInterval(setIndividual_time, 30000);
+            setInterval(save_time, 10000);
+            
+
+
+        </script>	        
+
+
+<!--     <script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p03.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582JKzDzTsXZH2T1%2fSkGjIxAr%2f5A7iB4jhsQVJGfZVwUDtjNtLO50KJxDPbZhchat1uukuy6%2f4V6wJAlqfEea1GEgSPFdu%2bYGtN%2fijTN4cKziC4SZu9z0YD4pnNWLWtpbI41eq4sU%2f1tioICBZbVxgZBh%2fAw5CRDK%2f9XHsdlrPUj6wDO8EmMmry8jzrxJiOEF0uciH2avDmipDNJf35PXLWrQIBm1Do6wg9lA%2ftEwndjY%2fvOThFfP%2fSUKxe57gvQjvHgG1rYywFecLfr29EVO0M8aPHv0%2fT2dVGrs03498rtArRiVAozENmRFgEfPNklwkHDi3ZXjbhgP%2by58VkaQBiI3k3Bgaphm4OUGaXGtul7YLqR%2b6xuzSuh8VbcN7JUR1KAW81P7UlqsUQJqcfH7U0fcx296VuCMHewIMFaIx0UxMDlhEplHggkCou62XLmIo7OLli1HS9euYIlZjNO%2bA0bxtgbioAdNzvfdo8fdPDTY8PbbGkLE8xP0SjRAEeYictXDa06Wf8zgaTNumX7I4tZ4Xnpo%2booLPhaP2VVnx3QbB4DFXAREIR2wz%2b6%2bKBo1Mjg%3d%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script> -->
+    <span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span></body></html>

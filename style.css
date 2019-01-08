@@ -1,0 +1,289 @@
+body{
+	background: #A9E5D9;
+}
+/*custom scroll bar*/
+body::-webkit-scrollbar{
+	width: 12px !important;
+}
+body::-webkit-scrollbar-track {
+    	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+body::-webkit-scrollbar-thumb{
+	background: linear-gradient(#02CFC8,#e5f1f3) !important;
+	/*border-radius: 6px;*/
+}
+/*end custom scroll bar*/
+.bg-custom{
+	background: #02CFC8 !important;
+	min-height: 65px;
+}
+/*CSS NAVBAR*/
+nav{
+	    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+.font-weight-bold {
+    font-weight: 650!important;
+}
+.side-bar{
+	font-size: 20px;
+    font-weight: 450;
+}
+.user{
+	margin-bottom: 0px !important;
+}
+.dropdown-menu{
+	left: 25% !important;
+}
+/*END CSS NAVBAR*/
+
+/*CSS SOAL HEAD*/
+.d-block{
+	min-height: 110vh !important;
+}
+.soal-head{
+	margin-top: 5%;
+	background: #fff;
+	padding: 17px;
+	font-weight: bold;
+	font-size: 17px;
+	box-shadow: inset 0 0px 5px 0 rgba(0,0,0,0), 0 0px 0px 0 rgba(0,0,0,0);
+}
+/*.nomor{
+	background: #02CFC8;
+	color: #fff;
+	padding: 10px 15px;
+    margin: 1% !important;
+}*/
+.soal{
+	padding: 10px 5px;
+	margin-top: -1% !important;
+}
+.soal-no {
+    background: #A9E5D9;
+    color: #000;
+    padding: 10px 15px;
+    margin-top: -1% !important;
+    font-weight: bold;
+    text-shadow: 3px 0px 3px rgb(255, 251, 251);
+}
+.waktu-mundur{
+	background: #02CFC8;
+	color: #fff;
+	padding: 10px 15px;
+	margin-top: -1% !important;
+	text-shadow: 0 0 3px rgba(0,0,0,1);
+}
+.waktu{
+	background: #A9E5D9;
+    color: #000;
+	padding: 10px 15px;
+    margin-top: -1% !important;
+    font-weight: bold;
+    text-shadow: 3px 0px 3px rgb(255, 251, 251);
+}
+/*END CSS SOAL HEAD*/
+
+/*CSS SOAL PELAJARAN*/
+.soal-pelajaran{
+	background:#e5f1f3;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+.soal-pelajaran h5{
+	margin-bottom: 0px !important;
+	height: 50px !important;
+	line-height: 50px !important;
+}
+/*END CSS SOAL PELAJARAN*/
+
+/*CSS SOAL BODY*/
+.soal-body{
+	background: #fff;
+	min-height: 65px;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+.pertanyaan{
+	margin: 20px;
+	padding: 20px;
+	border: solid 1px #ccc;
+}
+.jawaban{
+	padding: 0 100px;
+}
+.pilih-jawaban{
+	margin :15px 0px;
+}
+.pilih-jawaban:hover{
+	background:#e5f1f3;
+}
+/*END CSS SOAL BODY*/
+
+/*CSS SOAL FOOTER*/
+.soal-footer{
+	background:#e5f1f3;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+.justify-content-center {
+    margin: 20px 0px;
+}
+.page-item.active .page-link {
+    background-color: #02CFC8 !important;
+    border-color: #e5f1f3 !important;
+ }
+/*END CSS SOAL FOOTER*/
+
+/*DAFTAR SOAL*/
+.tombol-daftar-soal{
+	right: 0;
+	top: 200px;
+	position: fixed;
+	transition: right 2s;
+	z-index: 1021;
+}
+.tombol-daftar-soal-2{
+	right: 300px;
+	top: 200px;
+	position: fixed;
+	transition: right 2s;
+    z-index: 1021;
+}
+.daftar-soal{
+	right: -300px;
+	/*right: 0px;*/
+	top: 80px;
+	width: 300px;
+    height: 370px;
+	background: #e5f1f3;
+	border :solid 10px #ADA7A7;
+	position: fixed;
+	transition: right 2s;
+	border-radius: 0.25rem;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+	overflow-y: scroll;
+    z-index: 1021;
+}
+.daftar-soal-2{
+	right: 0px;
+	top: 80px;
+	width: 300px;
+    height: 370px;
+	background: #e5f1f3;
+	border :solid 10px #ADA7A7;
+	position: fixed;
+	transition: right 2s;
+	border-radius: 0.25rem;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+	overflow-y: scroll;
+    z-index: 1021;
+}
+.fa-arrow-up{
+	display: none;
+}
+.br-up{
+	display: none !important;
+}
+.nomor{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 23px;
+    margin-right: -30px;
+    padding: 0px !important;
+}
+.nomor a{
+	height: 55px !important;
+    width: 55px !important;
+}
+/*END DAFTAR SOAL*/
+@media only screen and (max-width:52.06rem) {
+	.soal-head{
+		margin-top: 30%;
+	}
+	.waktu-mundur {
+    background: #02CFC8;
+    color: #fff;
+    padding: 10px 14px;
+    margin-top: -1% !important;
+    text-shadow: 2px -1px 0px rgba(0,0,0,1);
+	width: 133px;
+    text-align: center;
+	}
+	.soal-no {
+    background: #A9E5D9;
+    color: #000;
+    padding: 10px 14px;
+    margin-top: 5% !important;
+    font-weight: bold;
+    text-shadow: 3px 0px 3px rgb(255, 251, 251);
+    width: 133px;
+    font-size: 17px;
+	}
+	.jawaban {
+    	padding: 0px 35px;
+	}
+	.tombol-daftar-soal {
+    right: 0;
+    top: unset !important;
+    bottom: 15px !important;
+    position: fixed;
+    transition: bottom 2s;
+    z-index: 1021;
+    /*transform: rotate(90deg);*/
+	}
+	.tombol-daftar-soal-2 {
+    right: 0px;
+	top: unset !important;
+    bottom: 465px !important;
+    position: fixed;
+    transition: bottom 2s;
+    z-index: 1021;
+    /*transform: rotate(90deg);*/
+	}
+	.text-daftar{
+		transform: rotate(90deg);
+	}
+	.daftar-soal {
+    /*right: -300px;*/
+    right: 0px;
+    top: unset !important; 
+    bottom: -370px !important;
+    width: 300px;
+    height: 370px;
+    background: #e5f1f3;
+    border: solid 10px #ADA7A7;
+    position: fixed;
+    transition: bottom 2s;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    overflow-y: scroll;
+    z-index: 1021;
+    /*display: none;*/
+	}
+	.daftar-soal-2 {
+    /*right: 0px;*/
+    top: unset;
+    bottom: 80px !important;
+    width: 300px;
+    height: 370px;
+    background: #e5f1f3;
+    border: solid 10px #ADA7A7;
+    position: fixed;
+    transition: bottom 2s;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    overflow-y: scroll;
+    z-index: 1021;
+    /*display: none;*/
+	}
+	.fa-arrow-left{
+	display: none !important;
+	}	
+	.fa-arrow-up{
+	display: inline !important;
+	/*position: relative !important;*/
+    /*top: 0px !important;*/
+	}
+	}
+	.br-up{
+	display: inline !important;
+	}
+}
+
